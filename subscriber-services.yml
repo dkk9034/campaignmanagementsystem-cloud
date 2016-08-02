@@ -1,0 +1,15 @@
+spring:
+  data: 
+    mongodb: 
+      host: 10.0.1.151
+      database: SubscriberServices
+      port: 27017
+    
+# HTTP Server
+server:
+  port: 2224   # HTTP (Tomcat) port
+  
+# Spring Actuators Properties     
+management: 
+  port: 2324
+  address: 127.0.0.1

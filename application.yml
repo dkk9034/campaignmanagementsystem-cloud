@@ -1,0 +1,18 @@
+logging:
+  level:
+    org.springframework.security: INFO
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://52.66.89.202:8761/eureka/
+      
+# Spring Actuators Properties    
+endpoints: 
+  beans: 
+    sensitive: false
+  shutdown: 
+    enabled: true
+    sensitive: false  

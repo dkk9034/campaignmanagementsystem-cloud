@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://52.66.86.134:3306/campaignmgmt
+    username: banyan
+    password: banyancampaign
+    
+# HTTP Server
+server:
+  port: 2222   # HTTP (Tomcat) port
+  
+# Spring Actuators Properties       
+management: 
+  port: 2322
+  address: 127.0.0.1 

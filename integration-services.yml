@@ -1,0 +1,40 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://52.66.86.134:3306/campaignmgmt
+    username: banyan
+    password: banyancampaign
+    
+# HTTP Server
+server:
+  port: 9001
+  context-path: /api
+  
+# Spring Actuators Properties       
+management: 
+  port: 9101
+  address: 127.0.0.1
+  
+client_key: campaignapp
+client_secret_key: campaignappsecret
+
+zuul:
+  routes:
+    promotion-services: /promotion/**
+    campaign-services: /campaign/**
+    subscriber-services: /subscriber/**
+    distribution-services: /distribution/**
+    location-services: /location/**
+  
+security:
+  user:
+    password: password 
+
+  
+hystrix:
+ command:
+   default:
+     execution:
+       isolation:
+         thread:
+           timeoutInMilliseconds: 60000
