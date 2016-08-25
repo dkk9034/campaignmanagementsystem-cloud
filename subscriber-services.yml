@@ -1,7 +1,7 @@
 spring:
   data: 
     mongodb: 
-      host: 10.0.1.151
+      host: localhost
       database: SubscriberServices
       port: 27017
     
@@ -12,4 +12,6 @@ server:
 # Spring Actuators Properties     
 management: 
   port: 2324
-  address: 127.0.0.1
+  
+# Third Party Integration Mapping related Configuration
+thirdpartyintegrationmappings: "{\"clients\":[{\"name\":\"eclipsemedia\",\"mappingClass\":\"campaign.subscriber.domain.Human\",\"mapping\":{\"profilePicURL\":\"profilePicUrl\",\"lastName\":\"lastName\",\"phone\":\"phone\",\"isDeleted\":\"isDeleted\",\"id\":\"referenceId\",\"email\":\"email\",\"userName\":\"userName\",\"firstName\":\"firstName\",\"mobile\":\"mobile\"}},{\"name\":\"xibo\",\"mappingClass\":\"campaign.subscriber.domain.Machine\",\"mapping\":{\"alertTimeout\":\"alertTimeout\",\"auditingUntil\":\"auditingUntil\",\"broadCastAddress\":\"broadCastAddress\",\"cidr\":\"cidr\",\"clientAddress\":\"clientAddress\",\"clientCode\":\"clientCode\",\"clientType\":\"clientType\",\"clientVersion\":\"clientVersion\",\"currentLayout\":\"currentLayout\",\"currentLayoutId\":\"currentLayoutId\",\"defaultLayout\":\"defaultLayout\",\"defaultLayoutId\":\"defaultLayoutId\",\"description\":\"description\",\"display\":\"display\",\"displayId\":\"referenceId\",\"displayProfileId\":\"displayProfileId\",\"emailAlert\":\"emailAlert\",\"incSchedule\":\"incSchedule\",\"lastAccessed\":\"lastAccessed\",\"lastChanged\":\"lastChanged\",\"lastCommandSuccess\":\"lastCommandSuccess\",\"lastWakeOnLanCommandSent\":\"lastWakeOnLanCommandSent\",\"latitude\":\"latitude\",\"license\":\"license\",\"licensed\":\"licensed\",\"loggedIn\":\"loggedIn\",\"longitude\":\"longitude\",\"macAddress\":\"macAddress\",\"mediaInventoryStatus\":\"mediaInventoryStatus\",\"numberOfMacAddressChanges\":\"numberOfMacAddressChanges\",\"screenShotRequested\":\"screenShotRequested\",\"secureOn\":\"secureOn\",\"storageAvailableSpace\":\"storageAvailableSpace\",\"storageTotalSpace\":\"storageTotalSpace\",\"versionInstructions\":\"versionInstructions\",\"wakeOnLanEnabled\":\"wakeOnLanEnabled\",\"wakeOnLanTime\":\"wakeOnLanTime\",\"xmrChannel\":\"xmrChannel\",\"xmrPubKey\":\"xmrPubKey\"}}]}"
