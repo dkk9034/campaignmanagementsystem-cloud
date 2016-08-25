@@ -1,0 +1,14 @@
+spring:
+  data: 
+    mongodb: 
+      host: localhost
+      database: ProofOfPlayServices
+      port: 27017
+    
+# HTTP Server
+server:
+  port: 2227   # HTTP (Tomcat) port
+  
+# Spring Actuators Properties     
+management: 
+  port: 2327
