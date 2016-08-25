@@ -1,7 +1,7 @@
 spring:
   data: 
     mongodb: 
-      host: 10.0.1.151
+      host: localhost
       database: LocationServices
       port: 27017
     
@@ -12,4 +12,3 @@ server:
 # Spring Actuators Properties     
 management: 
   port: 2323
-  address: 127.0.0.1
