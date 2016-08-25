@@ -3,4 +3,3 @@ server:
   
 management: 
   port: 8861
-  address: 127.0.0.1
