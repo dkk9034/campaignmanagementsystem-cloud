@@ -1,7 +1,7 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://52.66.86.134:3306/campaignmgmt
+    url: jdbc:mysql://localhost:3306/campaignmgmt
     username: banyan
     password: banyancampaign
     
@@ -13,7 +13,7 @@ server:
 # Spring Actuators Properties       
 management: 
   port: 9101
-  address: 127.0.0.1
+#  address: 127.0.0.1
   
 client_key: campaignapp
 client_secret_key: campaignappsecret
@@ -25,6 +25,8 @@ zuul:
     subscriber-services: /subscriber/**
     distribution-services: /distribution/**
     location-services: /location/**
+    content-services: /content/**
+
   
 security:
   user:
@@ -38,3 +40,27 @@ hystrix:
        isolation:
          thread:
            timeoutInMilliseconds: 60000
+           
+           
+xibo:
+  client:
+    id: du7BZsmPAQIysxtJDFjEWlUi7milgyhuG6aOD1ct
+    secret: xljgDEB5N06SOQwne0jHABHIL0LgCBk6AELqFChNf2u65LmJGIdWNS5g2KhPXSjHvTE4es51PnzN0Jkdn1sH9angFUfRe5EpSvZLZnUaGjr5r7R9Ut8PZjaZIZWZQNrcjjPd6rLZxNsJsA3l95XPFygxKROB1CG7aFdDZmHy2e39lh4m18dUzEf3wQy5q5EDmfaBlLCRY9fT5wLNYnca64LcbrfCuytKJGFBnz5Anq52PtFuao0w7vxLQsmodB
+  api:
+    authorize:
+      token: http://52.66.129.29/api/authorize/access_token
+    layout: http://52.66.129.29/api/layout?access_token=
+    status: http://52.66.129.29/api/layout/status/
+    campaign: http://52.66.129.29/api/campaign
+    library:
+      media: http://52.66.129.29/api/library?mediaId=
+      name: http://52.66.129.29/api/library?media=
+    upload: http://52.66.129.29/api/library
+    playlist:
+      library:
+        assign: http://52.66.129.29/api/playlist/library/assign/
+      widget:
+        delete: http://52.66.129.29/api/playlist/widget/
+    schedule: http://52.66.129.29/api/schedule
+    event: http://52.66.129.29/api/schedule/data/events
+    deleteevent: http://52.66.129.29/api/schedule/
