@@ -1,9 +1,12 @@
 spring:
   datasource:
     driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://52.66.86.134:3306/campaignmgmt
+    url: jdbc:mysql://localhost:3306/campaignmgmt
     username: banyan
     password: banyancampaign
+    testOnBorrow: true
+    validationQuery: SELECT 1   
+
     
 # HTTP Server
 server:
@@ -12,4 +15,3 @@ server:
 # Spring Actuators Properties       
 management: 
   port: 2326
-  address: 127.0.0.1 
