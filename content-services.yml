@@ -15,6 +15,10 @@ management:
   port: 2321
   
 ##  ffmpeg Path set up
-ffmpegexePath: /usr/bin/ffmpeg311/ffmpeg
-qtfaststartPath: /usr/bin/ffmpeg311/qt-faststart
-ffprobeexePath: /usr/bin/ffmpeg311/ffprob
+#ffmpegexePath: /usr/bin/ffmpeg311/ffmpeg
+#qtfaststartPath: /usr/bin/ffmpeg311/qt-faststart
+#ffprobeexePath: /usr/bin/ffmpeg311/ffprob
+
+ffmpegexePath: E:\\ffmpeg\\ffmpeg.exe
+qtfaststartPath: E:\\ffmpeg\\qt-faststart.exe
+ffprobeexePath: E:\\ffmpeg\\ffprobe.exe
